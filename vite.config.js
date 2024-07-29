@@ -38,7 +38,7 @@ export default defineConfig({
         strictPort: true,
         hmr: {
             protocol: 'ws',
-            host: 'https://walrus-app-2cwac.ondigitalocean.app/', // Configura el host para HMR
+            host: 'walrus-app-2cwac.ondigitalocean.app/', // Configura el host para HMR
         },
     },
     // optimizeDeps: {
