@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('detalle_sede', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('codigo_sede');
+            $table->unsignedBigInteger('codigo_sede')->nullable();
             $table->string('codigo_cliente', 100);
             $table->string('nombre_sede', 100);
             $table->string('grupo', 255)->nullable();
@@ -32,9 +32,9 @@ return new class extends Migration
             $table->string('detalle_nombre', 255)->nullable();
             $table->string('agente_encargado_de_venta', 255)->nullable();
             $table->timestamps(); // Esto crea created_at y updated_at
-
-            // Añadir restricción única en codigo_sede
-            $table->unique('codigo_sede');
+        
+            // Añadir índice en codigo_sede
+            $table->index('codigo_sede');
         });
     }
 
