@@ -4,8 +4,10 @@ import "leaflet/dist/leaflet.css";
 import * as L from 'leaflet';
 import AdminLayout from "@/Layouts/AdminLayout.vue";
 
-
 import { Chart as ChartJS, Title, Tooltip, Legend, CategoryScale, LinearScale, BarController, BarElement } from 'chart.js';
+
+const appUrl = ref(window.App.url);
+
 
 ChartJS.register(Title, Tooltip, Legend, CategoryScale, LinearScale, BarController, BarElement);
 

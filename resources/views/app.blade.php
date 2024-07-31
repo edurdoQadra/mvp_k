@@ -17,5 +17,12 @@
     </head>
     <body class="font-sans antialiased">
         @inertia
+
+        <script>
+        window.App = {
+            url: @json(env('APP_URL')),
+            // Puedes añadir más variables globales aquí si lo deseas
+        };
+    </script>
     </body>
 </html>
