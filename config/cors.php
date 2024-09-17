@@ -29,8 +29,6 @@ return [
 
     'max_age' => 0,
 
-    'supports_credentials' => true,
-    
-    'allowed_origins' => ['https://lobster-app-onp3b.ondigitalocean.app/'],
+    'supports_credentials' => false,
 
 ];
