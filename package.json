@@ -3,8 +3,7 @@
     "scripts": {
   "dev": "vite",
   "build": "vite build",
- "build:digitalocean": "npm install --production=false && npm run build && npm ci",
-  "postbuild": "php artisan config:cache && php artisan route:cache && php artisan view:cache"
+ "build:digitalocean": "npm install --production=false && npm run build && npm ci"
 },
     "devDependencies": {
         "@inertiajs/vue3": "^1.0.0",
