@@ -32,6 +32,9 @@ export default defineConfig(({ mode }) => {
                 external: ['kingtech_logo_verde@4x.png'],  // Puedes ajustar esto si tienes otros activos externos
             },
         },
+        server: {
+        https: true,  // Habilitar HTTPS para desarrollo
+    },
      
     };
 });
