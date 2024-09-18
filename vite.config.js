@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
     const isProduction = mode === 'production';
 
     return {
-        base: isProduction ? 'https://coral-app-onp3b.ondigitalocean.app/' : '/', // URL base para producción
+        base: isProduction ? 'https://coral-app-iuz2k.ondigitalocean.app/' : '/', // URL base para producción
         plugins: [
             laravel({
                 input: ['resources/js/app.js'], // Asegúrate de pasar un array en 'input'
