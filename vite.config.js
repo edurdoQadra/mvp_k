@@ -24,13 +24,13 @@ export default defineConfig(({ mode }) => {
         define: {
             '__VUE_PROD_HYDRATION_MISMATCH_DETAILS__': isProduction ? 'false' : 'true',
         },
-        optimizeDeps: {
-            exclude: ['pdfmake'],
-        },
         build: {
-            rollupOptions: {
-                external: ['kingtech_logo_verde@4x.png'],  // Puedes ajustar esto si tienes otros activos externos
-            },
+        rollupOptions: {
+            external: ['/kingtech_logo_verde@4x.png'],
+        },
+        outDir: 'public/build',
+        assetsDir: 'assets',
+         },
         },
 
     };
