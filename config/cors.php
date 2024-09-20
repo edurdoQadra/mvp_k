@@ -16,19 +16,11 @@ return [
     */
 
     'paths' => ['*', 'sanctum/csrf-cookie'],
-
     'allowed_methods' => ['*'],
-
-    'allowed_origins' => ['*'],
-
+    'allowed_origins' => ['*'], // Permitir cualquier origen
     'allowed_origins_patterns' => [],
-
-    'allowed_headers' => ['*'],
-
+    'allowed_headers' => ['*'], // Permitir todos los encabezados
     'exposed_headers' => [],
-
     'max_age' => 0,
-
-    'supports_credentials' => false,
-
+    'supports_credentials' => true, // Si necesitas autenticación de sesión o cookies
 ];
