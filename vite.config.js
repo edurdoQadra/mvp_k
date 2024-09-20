@@ -3,10 +3,8 @@ import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 
 export default defineConfig(({ mode }) => {
-    const isProduction = mode === 'production';
-
     return {
-        base: isProduction ? 'https://coral-app-iuz2k.ondigitalocean.app/' : '/',
+        base: 'https://coral-app-iuz2k.ondigitalocean.app/',
         plugins: [
             laravel({
                 input: ['resources/js/app.js'],
