@@ -6,11 +6,11 @@ export default defineConfig(({ mode }) => {
     const isProduction = mode === 'production';
 
     return {
-        base: isProduction ? 'https://coral-app-iuz2k.ondigitalocean.app/' : '/', // URL base para producción
+        base: isProduction ? 'https://coral-app-iuz2k.ondigitalocean.app/' : '/',
         plugins: [
             laravel({
-                input: ['resources/js/app.js'], // Asegúrate de pasar un array en 'input'
-                refresh: !isProduction,  // Desactivar refresh en producción
+                input: ['resources/js/app.js'],
+                refresh: !isProduction,  // Recarga en caliente solo en desarrollo
             }),
             vue({
                 template: {
@@ -21,14 +21,11 @@ export default defineConfig(({ mode }) => {
                 },
             }),
         ],
-        define: {
-            '__VUE_PROD_HYDRATION_MISMATCH_DETAILS__': isProduction ? 'false' : 'true',
-        },
         build: {
             rollupOptions: {
                 external: ['/kingtech_logo_verde@4x.png'],
             },
-            outDir: 'public/build',  // Asegúrate de que esta ruta exista o esté correctamente configurada
+            outDir: 'public/build',
             assetsDir: 'assets',
         },
     };
