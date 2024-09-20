@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue';
 
 export default defineConfig(({ mode }) => {
     return {
-        base: mode === 'production' ? 'https://coral-app-iuz2k.ondigitalocean.app/':'/',
+        base: mode === 'production' ? 'https://coral-app-iuz2k.ondigitalocean.app/' : '/',
         plugins: [
             laravel({
                 input: ['resources/js/app.js'],
@@ -18,6 +18,11 @@ export default defineConfig(({ mode }) => {
                 },
             }),
         ],
+        server: {
+            https: mode === 'production', // Habilitar HTTPS en producción
+            host: '0.0.0.0', // Permitir acceso externo
+            port: 5173,
+        },
         build: {
             rollupOptions: {
                 external: ['/kingtech_logo_verde@4x.png'],
