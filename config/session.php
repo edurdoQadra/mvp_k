@@ -155,7 +155,9 @@ return [
     |
     */
 
-    'domain' => env('SESSION_DOMAIN'),
+    //'domain' => env('SESSION_DOMAIN'),
+    'domain' => env('SESSION_DOMAIN', '.coral-app-iuz2k.ondigitalocean.app'),
+
 
     /*
     |--------------------------------------------------------------------------
