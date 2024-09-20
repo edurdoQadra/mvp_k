@@ -8,7 +8,6 @@ export default defineConfig(({ mode }) => {
         plugins: [
             laravel({
                 input: ['resources/js/app.js'],
-                refresh: !isProduction,  // Recarga en caliente solo en desarrollo
             }),
             vue({
                 template: {
