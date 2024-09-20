@@ -15,12 +15,12 @@ return [
     |
     */
 
-    'paths' => ['*', 'sanctum/csrf-cookie'],
+     'paths' => ['*', 'sanctum/csrf-cookie'], // Asegúrate de incluir todas las rutas
     'allowed_methods' => ['*'],
-    'allowed_origins' => ['*'], // Permitir cualquier origen
+    'allowed_origins' => ['https://coral-app-iuz2k.ondigitalocean.app'], // Especifica tu dominio
     'allowed_origins_patterns' => [],
-    'allowed_headers' => ['*'], // Permitir todos los encabezados
+    'allowed_headers' => ['*'],
     'exposed_headers' => [],
     'max_age' => 0,
-    'supports_credentials' => true, // Si necesitas autenticación de sesión o cookies
+    'supports_credentials' => true, // Si usas cookies o autenticación
 ];
