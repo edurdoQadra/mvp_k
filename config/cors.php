@@ -17,7 +17,7 @@ return [
 
      'paths' => ['*', 'sanctum/csrf-cookie'], // Asegúrate de incluir todas las rutas
     'allowed_methods' => ['*'],
-    'allowed_origins' => ['https://coral-app-iuz2k.ondigitalocean.app'], // Especifica tu dominio
+    'allowed_origins' => ['http://localhost:5173'], // Cambia esto si es necesario
     'allowed_origins_patterns' => [],
     'allowed_headers' => ['*'],
     'exposed_headers' => [],
