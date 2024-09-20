@@ -23,6 +23,9 @@ export default defineConfig(({ mode }) => {
             host: '0.0.0.0', // Permitir acceso externo
             port: 5173,
         },
+         define: {
+        '__VUE_PROD_HYDRATION_MISMATCH_DETAILS__': JSON.stringify(true)
+        },
         build: {
             rollupOptions: {
                 external: ['/kingtech_logo_verde@4x.png'],
