@@ -3,6 +3,7 @@ import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 
 export default defineConfig(({ mode }) => {
+    let isProduction == 'production',
     return {
         base: isProduction ? 'https://dolphin-app-fzfl6.ondigitalocean.app/' : '/',
         plugins: [
