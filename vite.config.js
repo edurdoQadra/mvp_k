@@ -3,7 +3,7 @@ import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 
 export default defineConfig(({ mode }) => {
-let isProduction == 'production',
+let isProduction = mode === 'production';
 
 
     return {
