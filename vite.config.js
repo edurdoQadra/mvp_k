@@ -3,7 +3,8 @@ import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 
 export default defineConfig(({ mode }) => {
-    let isProduction = mode === 'production';
+let isProduction == 'production',
+
 
     return {
         // Deja la base como '/' para que sea relativa a cualquier dominio
