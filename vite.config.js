@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue';
 
 export default defineConfig(({ mode }) => {
     return {
-        base: mode === 'production' ? 'https://coral-app-iuz2k.ondigitalocean.app/' : '/',
+        base: mode === 'production',
         plugins: [
             laravel({
                 input: ['resources/js/app.js'],
