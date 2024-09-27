@@ -22,11 +22,6 @@ let isProduction = mode === 'production';
                 },
             }),
         ],
-        server: {
-            https: isProduction, // Habilitar HTTPS en producción
-            host: '0.0.0.0', // Permitir acceso externo
-            port: 5173,
-        },
         define: {
             '__VUE_PROD_HYDRATION_MISMATCH_DETAILS__': JSON.stringify(true)
         },
