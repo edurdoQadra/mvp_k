@@ -9,7 +9,7 @@ let isProduction = mode === 'production';
         base: isProduction ? 'http://hammerhead-app-vecpt.ondigitalocean.app/' : '/',
         plugins: [
             laravel({
-                input: ['resources/js/app.js'],
+                input: ['resources/js/app.js','resources/css/app.css'],
             }),
             vue({
                 template: {
