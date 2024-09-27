@@ -8,7 +8,7 @@ let isProduction = mode === 'production';
 
     return {
         // Deja la base como '/' para que sea relativa a cualquier dominio
-        base: isProduction ? '/' : '/',
+        base: isProduction ? 'http://hammerhead-app-vecpt.ondigitalocean.app/' : '/',
         plugins: [
             laravel({
                 input: ['resources/js/app.js'],
