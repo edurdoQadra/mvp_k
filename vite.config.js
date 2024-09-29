@@ -1,12 +1,7 @@
-import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
-import vue from '@vitejs/plugin-vue';
-
 export default defineConfig(({ mode }) => {
     const isProduction = mode === 'production';
 
     return {
-        // Usa URL relativa para entornos de producción
         base: isProduction ? '/' : '/',
 
         plugins: [
@@ -29,10 +24,15 @@ export default defineConfig(({ mode }) => {
 
         build: {
             rollupOptions: {
-                // No external assets defined anymore
+                // Opciones para Rollup
             },
             outDir: 'public/build',
             assetsDir: 'assets',
+        },
+
+        // Configuración de desarrollo
+        server: {
+            hmr: !isProduction, // Deshabilitar HMR en producción
         },
     };
 });
