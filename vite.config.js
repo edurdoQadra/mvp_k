@@ -1,3 +1,7 @@
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import laravel from 'laravel-vite-plugin';
+
 export default defineConfig(({ mode }) => {
     const isProduction = mode === 'production';
 
@@ -32,7 +36,7 @@ export default defineConfig(({ mode }) => {
         // Configuración de desarrollo
         server: {
             hmr: !isProduction, // Deshabilitar HMR en producción
-             https: isProduction,
+            https: isProduction,
         },
     };
 });
