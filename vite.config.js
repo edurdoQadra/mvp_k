@@ -29,7 +29,6 @@ export default defineConfig(({ mode }) => {
             outDir: 'public/build',
             assetsDir: 'assets',
         },
-
         // Configuración de desarrollo
         server: {
             hmr: !isProduction, // Deshabilitar HMR en producción
