@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
     const isProduction = mode === 'production';
 
     return {
-        base: isProduction ? '/' : '/',
+        base: isProduction ? 'https://hammerhead-app-vecpt.ondigitalocean.app/' : '/',
 
         plugins: [
             laravel({
