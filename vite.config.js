@@ -35,8 +35,12 @@ export default defineConfig(({ mode }) => {
         },
         // Configuración de desarrollo
         server: {
-            hmr: !isProduction, // Deshabilitar HMR en producción
-            https: isProduction,
+    hmr: {
+        host: 'localhost',
+        port: 3000,
         },
+        https: isProduction, // Use HTTPS in production
+    },
+
     };
 });
