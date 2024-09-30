@@ -7,10 +7,12 @@ export default defineConfig(({ mode }) => {
 
     return {
         base: isProduction ? 'https://hammerhead-app-vecpt.ondigitalocean.app/' : '/',
-
+        
         plugins: [
             laravel({
                 input: ['resources/js/app.js', 'resources/css/app.css'],
+                // Opcional: puedes agregar aquí la configuración de SSR si es necesario
+                // ssr: 'resources/js/ssr.js',
             }),
             vue({
                 template: {
@@ -18,25 +20,25 @@ export default defineConfig(({ mode }) => {
                         base: null,
                         includeAbsolute: false,
                     },
-                }),
+                },
             }),
         ],
 
         define: {
-            '__VUE_PROD_HYDRATION_MISMATCH_DETAILS__': JSON.stringify(true)
+            '__VUE_PROD_HYDRATION_MISMATCH_DETAILS__': JSON.stringify(true),
         },
 
         build: {
             rollupOptions: {
-                // Opciones para Rollup
+                // Aquí puedes agregar configuraciones adicionales para Rollup
             },
-            outDir: 'public/build',
-            assetsDir: 'assets',
+            outDir: 'public/build', // El directorio de salida para los archivos construidos
+            assetsDir: 'assets', // El directorio de los activos dentro de 'public/build'
         },
 
-        // Configuración de servidor para desarrollo y producción
         server: {
-            https: isProduction, // HTTPS habilitado en producción
+            https: !isProduction, // HTTPS habilitado solo en desarrollo si es necesario
+            // Otras configuraciones como proxy o puertos también se pueden agregar aquí
         },
     };
 });
