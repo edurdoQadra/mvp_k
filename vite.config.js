@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => {
                         base: null,
                         includeAbsolute: false,
                     },
-                },
+                }),
             }),
         ],
 
@@ -33,14 +33,10 @@ export default defineConfig(({ mode }) => {
             outDir: 'public/build',
             assetsDir: 'assets',
         },
-        // Configuración de desarrollo
-        server: {
-    hmr: {
-        host: 'localhost',
-        port: 3000,
-        },
-        https: isProduction, // Use HTTPS in production
-    },
 
+        // Configuración de servidor para desarrollo y producción
+        server: {
+            https: isProduction, // HTTPS habilitado en producción
+        },
     };
 });
