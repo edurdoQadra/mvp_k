@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:digitalocean": "npm ci && npm run build"
+    "build:digitalocean": "npm install && npm install config && npm run build && npm ci"
   },
     "devDependencies": {
         "@inertiajs/vue3": "^1.0.0",
